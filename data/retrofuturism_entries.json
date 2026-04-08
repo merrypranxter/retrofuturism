@@ -1,0 +1,62 @@
+[
+  {
+    "id": "victorian-steampunk",
+    "era": "1860s-1910s",
+    "title": "Victorian Steam Age Futures",
+    "summary": "Industrial-era imagination of future technology powered by steam, brass mechanisms, and ornate craftsmanship.",
+    "influences": ["Jules Verne", "H.G. Wells", "World fairs", "Industrial Revolution"],
+    "visual_cues": ["brass gears", "pressure gauges", "riveted iron", "airships", "foggy gaslit streets"],
+    "color_palette": ["#6A4E42", "#A97142", "#C6B38E", "#2F2A28", "#8A6D3B"],
+    "materials": ["brass", "copper", "iron", "leather", "mahogany"],
+    "architecture": ["iron-and-glass arcades", "clocktower skylines", "railway terminals"],
+    "fashion": ["tailcoats", "goggles", "corsetry", "mechanical accessories"],
+    "prompt_tokens": ["steampunk", "ornate victorian engineering", "brass machinery", "airship docks", "cinematic fog"],
+    "negative_tokens": ["cyberpunk neon", "modern cars", "smartphones", "minimalism"],
+    "source_notes": ["Use for warm, tactile retro-industrial scenes."]
+  },
+  {
+    "id": "dieselpunk-interwar",
+    "era": "1920s-1940s",
+    "title": "Interwar Diesel Age Tomorrow",
+    "summary": "Machine-age optimism and anxiety rendered through aerodynamic metal design, propaganda aesthetics, and colossal infrastructure.",
+    "influences": ["Art Deco", "Bauhaus", "Futurist posters", "Golden-age pulp magazines"],
+    "visual_cues": ["streamlined locomotives", "zeppelin moorings", "monumental terminals", "mechanized uniforms"],
+    "color_palette": ["#2A2E35", "#9CA3AF", "#D9D1C1", "#B23A2C", "#6F7C6B"],
+    "materials": ["steel", "concrete", "chrome", "bakelite"],
+    "architecture": ["art deco towers", "aerodromes", "massive civic plazas"],
+    "fashion": ["double-breasted coats", "aviator helmets", "structured silhouettes"],
+    "prompt_tokens": ["dieselpunk", "art deco futurism", "streamlined machines", "epic matte painting", "vintage grain"],
+    "negative_tokens": ["postmodern glass", "LED signage", "contemporary streetwear"],
+    "source_notes": ["Great for dramatic, metallic, and monumental settings."]
+  },
+  {
+    "id": "atompunk-space-age",
+    "era": "1950s-1960s",
+    "title": "Atomic Space Age Optimism",
+    "summary": "Mid-century visions of tomorrow featuring atom motifs, domestic automation, and optimistic space exploration.",
+    "influences": ["Googie architecture", "Jet Age advertising", "World's Fair concept art", "Space Race graphics"],
+    "visual_cues": ["boomerang forms", "starbursts", "bubble helmets", "rocket fins", "atomic symbols"],
+    "color_palette": ["#5CC8FF", "#FF6F61", "#F9D65C", "#FFFFFF", "#1B4965"],
+    "materials": ["fiberglass", "aluminum", "plastic laminates", "chrome"],
+    "architecture": ["googie diners", "cantilevered roofs", "futuristic suburbs"],
+    "fashion": ["mod dresses", "sleek jumpsuits", "cat-eye sunglasses"],
+    "prompt_tokens": ["atompunk", "mid-century future", "space-age suburbia", "vibrant clean lines", "optimistic poster art"],
+    "negative_tokens": ["grunge textures", "ultra-real smartphone UI", "medieval motifs"],
+    "source_notes": ["Ideal for bright, hopeful, stylized retro futures."]
+  },
+  {
+    "id": "cassette-futurism",
+    "era": "1970s-1980s",
+    "title": "Analog Electronic Futures",
+    "summary": "Future imagined through analog screens, chunky interfaces, and industrial sci-fi hardware from late 20th-century media.",
+    "influences": ["Industrial design", "early personal computing", "space thriller cinema", "anime mechanical design"],
+    "visual_cues": ["CRT glow", "toggle switches", "cathode scanlines", "panel labels", "modular control rooms"],
+    "color_palette": ["#0D0F1A", "#2B3A67", "#7A7A7A", "#E0A458", "#7FDBFF"],
+    "materials": ["painted steel", "ABS plastic", "rubber keycaps", "tempered glass"],
+    "architecture": ["industrial space stations", "modular corridors", "retro labs"],
+    "fashion": ["utilitarian jumpsuits", "patch insignia", "analog headsets"],
+    "prompt_tokens": ["cassette futurism", "analog sci-fi interface", "CRT monitor glow", "retro industrial", "film still composition"],
+    "negative_tokens": ["touchscreen holograms", "sleek nanotech", "baroque ornament"],
+    "source_notes": ["Use for grounded sci-fi with tactile, functional technology."]
+  }
+]

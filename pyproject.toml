@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retrofuturism-db"
+version = "0.1.0"
+description = "Structured retrofuturism style reference database for AI art workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Retrofuturism Contributors" }]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

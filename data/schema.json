@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retrofuturism Reference Entry",
+  "type": "object",
+  "required": ["id", "era", "title", "summary", "visual_cues", "prompt_tokens"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9\-]+$"},
+    "era": {"type": "string"},
+    "title": {"type": "string"},
+    "summary": {"type": "string"},
+    "influences": {"type": "array", "items": {"type": "string"}},
+    "visual_cues": {"type": "array", "items": {"type": "string"}},
+    "color_palette": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+    },
+    "materials": {"type": "array", "items": {"type": "string"}},
+    "architecture": {"type": "array", "items": {"type": "string"}},
+    "fashion": {"type": "array", "items": {"type": "string"}},
+    "prompt_tokens": {"type": "array", "items": {"type": "string"}},
+    "negative_tokens": {"type": "array", "items": {"type": "string"}},
+    "source_notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
