@@ -2,14 +2,37 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Retrofuturism Reference Entry",
   "type": "object",
-  "required": ["id", "era", "title", "summary", "visual_cues", "prompt_tokens"],
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "era",
+    "title",
+    "summary",
+    "visual_cues",
+    "prompt_tokens",
+    "composition_rules",
+    "common_subjects"
+  ],
   "properties": {
-    "id": {"type": "string", "pattern": "^[a-z0-9\-]+$"},
-    "era": {"type": "string"},
-    "title": {"type": "string"},
-    "summary": {"type": "string"},
-    "influences": {"type": "array", "items": {"type": "string"}},
-    "visual_cues": {"type": "array", "items": {"type": "string"}},
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9\\-]+$"
+    },
+    "era": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "influences": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "visual_cues": {
+      "$ref": "#/$defs/stringArray"
+    },
     "color_palette": {
       "type": "array",
       "items": {
@@ -17,11 +40,71 @@
         "pattern": "^#[0-9A-Fa-f]{6}$"
       }
     },
-    "materials": {"type": "array", "items": {"type": "string"}},
-    "architecture": {"type": "array", "items": {"type": "string"}},
-    "fashion": {"type": "array", "items": {"type": "string"}},
-    "prompt_tokens": {"type": "array", "items": {"type": "string"}},
-    "negative_tokens": {"type": "array", "items": {"type": "string"}},
-    "source_notes": {"type": "array", "items": {"type": "string"}}
+    "materials": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "architecture": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "fashion": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "shape_language": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "pattern_systems": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "ornament_logic": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "symbol_systems": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "composition_rules": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "lighting_atmosphere": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "typography_graphics": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "common_subjects": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "regional_variants": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "historical_context": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "modern_reinterpretation": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "adjacent_styles": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "prompt_tokens": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "negative_tokens": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "usage_notes": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "source_notes": {
+      "$ref": "#/$defs/stringArray"
+    }
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
   }
 }
