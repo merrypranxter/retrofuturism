@@ -1,25 +1,44 @@
 # Retrofuturism Style Database
 
-A lightweight, local-first reference repository for historical retrofuturism art directions.
+A local-first style archive for retrofuturism research, visual development, and AI-assisted prompt workflows.
 
-This project is designed for AI art applications that need structured context about style eras, visual motifs, palettes, materials, and prompt tokens.
+This repository now combines:
 
-## What is included
+- **Structured JSON entries** for machine use.
+- **A Python/CLI interface** for loading and querying styles.
+- **A doc set** for taxonomy, motif logic, composition systems, and application guidance.
 
-- `data/retrofuturism_entries.json` — core style entries for major retrofuturism waves.
-- `data/schema.json` — JSON schema for validating new entries.
-- `src/retrofuturism_db/database.py` — tiny Python API for load/get/search.
-- `src/retrofuturism_db/cli.py` — CLI for listing and querying styles.
-- `examples/prompt_templates.md` — prompt blueprints for model integrations.
+## Repository layout
+
+- `data/retrofuturism_entries.json` — canonical style entries.
+- `data/schema.json` — JSON schema for validating entries.
+- `docs/` — human-readable archive references:
+  - taxonomy
+  - visual trait matrix
+  - motif vocabulary
+  - composition logic
+  - color/material/surface guide
+  - historical & regional variants
+  - application-domain guidance
+  - prompting guide
+  - glossary
+- `src/retrofuturism_db/database.py` — data model + search API.
+- `src/retrofuturism_db/cli.py` — CLI commands.
+- `examples/prompt_templates.md` — reusable prompt templates.
 
 ## Data model summary
 
-Each entry includes:
+Each style entry includes base fields (`id`, `era`, `title`, `summary`) plus structured style facets:
 
-- `id`, `era`, `title`, `summary`
-- `influences`, `visual_cues`, `color_palette`
-- `materials`, `architecture`, `fashion`
-- `prompt_tokens`, `negative_tokens`, `source_notes`
+- Visual cues and palette
+- Materials, architecture, fashion
+- Shape language and pattern systems
+- Ornament and symbol logic
+- Composition and lighting guidance
+- Typography/graphics cues
+- Historical context and regional variants
+- Modern reinterpretation and adjacent styles
+- Prompt tokens, negative tokens, and practical usage notes
 
 ## Example usage
 
@@ -29,28 +48,37 @@ Each entry includes:
 from retrofuturism_db import load_default_db
 
 db = load_default_db()
+
+# List all style IDs
 print([entry.id for entry in db.list_entries()])
-print(db.get("atompunk-space-age"))
-print(db.search("art deco"))
+
+# Retrieve one entry
+entry = db.get("cassette-futurism")
+print(entry.composition_rules)
+
+# Search by motif/context
+for result in db.search("constructivist"):
+    print(result.id, result.title)
 ```
 
 ### CLI
 
 ```bash
 python -m retrofuturism_db.cli list
-python -m retrofuturism_db.cli get atompunk-space-age
-python -m retrofuturism_db.cli search "analog"
+python -m retrofuturism_db.cli get y2k-retrofuture-pop
+python -m retrofuturism_db.cli search "mission control"
 ```
 
-## Extending the database
+## Curation rules for contributors
 
-1. Add new entries in `data/retrofuturism_entries.json`.
-2. Follow `data/schema.json` for field structure.
-3. Keep prompt tokens concise and visually grounded.
-4. Prefer historically rooted terms over pure sci-fi jargon.
+1. Keep entries historically anchored.
+2. Separate adjacent substyles explicitly.
+3. Add practical implementation detail (composition, materials, symbols).
+4. Update `docs/INDEX.md` if new archive sections are created.
+5. Avoid vague descriptors that could apply to any sci-fi style.
 
-## Suggested next steps
+## Suggested follow-ups
 
-- Add per-entry image references and citation metadata.
 - Add JSON schema validation in CI.
-- Publish as a pip package with typed API docs.
+- Add per-entry citation metadata for primary references.
+- Add image reference boards per style entry.
